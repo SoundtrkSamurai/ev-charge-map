@@ -10,6 +10,10 @@ const routes = [
           {
             path: '',
             component: () => import('pages/route/RouteSelect.vue')
+          },
+          {
+            path: 'add-route',
+            component: () => import('pages/route/AddRoute.vue')
           }
         ]
       }

@@ -12,7 +12,7 @@
     <q-footer>
       <q-tabs class="text-light bg-teal">
         <q-tab name="/map" icon="explore" label="Maps" />
-        <q-tab name="/route" icon="directions" label="Routes" />
+        <q-tab name="/route" icon="directions" label="Journey" />
         <q-tab name="/auth" icon="login" label="Auth" />
       </q-tabs>
     </q-footer>
