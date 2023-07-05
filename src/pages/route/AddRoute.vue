@@ -2,7 +2,7 @@
   <q-page id="addRoute">
     <q-toolbar class="text-white bg-teal-8">
       <q-toolbar-title>Add Route</q-toolbar-title>
-      <q-btn to="/route/saved-route" flat round dense icon="favorites" color="red" />
+      <q-btn to="/route/saved-routes" flat round dense icon="favorites" color="red" />
     </q-toolbar>
     <q-scroll-area class="q-pa-md form-style">
       <div class="text-h6 q-pb-md">Save your favorite routes!</div>
