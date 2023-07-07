@@ -14,6 +14,10 @@ const routes = [
           {
             path: 'add-route',
             component: () => import('pages/route/AddRoute.vue')
+          },
+          {
+            path: 'saved-routes',
+            component: () => import('pages/route/SavedRoutes.vue')
           }
         ]
       }
