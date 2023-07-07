@@ -11,9 +11,9 @@
     </q-page-container>
     <q-footer>
       <q-tabs class="text-light bg-teal">
-        <q-tab name="/map" icon="explore" label="Maps" />
-        <q-tab name="/route" icon="directions" label="Journey" />
-        <q-tab name="/auth" icon="login" label="Auth" />
+        <q-route-tab name="/map" icon="explore" label="Maps" />
+        <q-route-tab to="/route" icon="directions" label="Journey" />
+        <q-route-tab to="/auth" icon="login" label="Auth" />
       </q-tabs>
     </q-footer>
   </q-layout>
