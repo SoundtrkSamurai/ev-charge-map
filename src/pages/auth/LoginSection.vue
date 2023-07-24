@@ -12,19 +12,19 @@
       <div class="q-pa-md q-gutter-md ">
         <div class="text-center">Login and get extra features!</div>
 
-        <q-input outlined stack-label label="Email">
+        <q-input v-model="email" outlined stack-label label="Email">
           <template v-slot:append>
             <q-icon name="close" />
           </template>
         </q-input>
-        <q-input outlined stack-label label="Password">
+        <q-input v-model="password" outlined stack-label label="Password">
           <template v-slot:append>
             <q-icon name="close" />
           </template>
         </q-input>
 
         <div>
-          <q-btn color="black" size="lg" class="full-width" label="Register" />
+          <q-btn @click="login" color="black" size="lg" class="full-width" label="Register" />
         </div>
 
         <div class="q-px-md q-mt-xl text-center">
@@ -37,7 +37,26 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import { createPinia } from 'pinia'
+import { useUserStore } from '../../store/user-store'
 
+const userStore = useUserStore(createPinia())
+
+const password = ref('')
+const email = ref('')
+
+const login = async () => {
+  // Get the3 tokens/cookie
+  await userStore.getSanctumCookie()
+  // Login user
+  await userStore.login(email.value, password.value)
+  // Get the user
+  const user = await userStore.fetchUser()
+  console.log(user)
+  // Set user data in localstorage (PINIA)
+  userStore.setUser(user.data)
+}
 </script>
 
 <style lang="scss">
